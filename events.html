@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lietuvos Programuotojai- renginiai</title>
+
+    <link rel="stylesheet" href="events.css">
+</head>
+
+<body>
+    <nav>
+        <span id="navTitle">Lietuvos programuotojai- renginiai</span>
+        <div>
+            <a class="navLink" href="index.html">Pagr.</a>
+            <a class="navLink" id="selectedNav" href="events.html">Renginiai</a>
+            <a class="navLink" href="faq.html">DUK</a>
+            <a id="highlightLink" href="https://discord.gg/nJ2rC2uJrU" target="_blank">Discord</a>
+        </div>
+    </nav>
+    <div id="heroWrapper">
+        <div id="mainDiv">
+            <h1 id="heroTitle">Aktyvūs renginiai</h1>
+
+            <div id="eventDivs">
+                <div class="eventDiv">
+                    <div class="eventSubDiv1">
+                        <p class="startSoon">
+                            Greitai
+                        </p>
+                        <h1 class="eventTime">2/05/2025 20val.</h1>
+                    </div>
+                    <div class="eventSubDiv2">
+                        <p class="eventTitle">24h Game jam</p>
+                        <p class="eventDesc">Game jam su duota tema, kuri turės būti atlikta per 24
+                            valandas. Negalima naudoti AI, žaidimais skaitosi, ne serveriai su kitų žaidimų pagrindu, o
+                            žaidimai nuo nulio su kažkokiu žaidimo varikliu (Pvz: Unity)</p>
+                    </div>
+                </div>
+
+                <div class="eventDiv">
+                    <div class="eventSubDiv1">
+                        <p class="started">
+                            Prasidėjo
+                        </p>
+                        <h1 class="eventTime">1/24/2025 20val.</h1>
+                    </div>
+                    <div class="eventSubDiv2">
+                        <p class="eventTitle">Freestyle projektas</p>
+                        <p class="eventDesc">Padaryti, bet kokios programavimo rūšies, bet kokios temos su programavimu
+                            susijusį projektą. Galima naudotis visais įrankiais, tačiau negalima imti kitų open source
+                            kodų.</p>
+                    </div>
+                </div>
+
+                <div class="eventDiv">
+                    <div class="eventSubDiv1">
+                        <p class="ended">
+                            Baigėsi
+                        </p>
+                        <h1 class="eventTime">1/14/2025 20val.</h1>
+                    </div>
+                    <div class="eventSubDiv2">
+                        <p class="eventTitle">Website jam</p>
+                        <p class="eventDesc">Padaryti internetinį puslapį, tema laisva, galima naudotis visais
+                            įrankiais, bet ne AI bei kitais kodais. Bus renkamas laimėtojas iš geriausio frontend,
+                            backend ir abiejų sudėjus.</p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                #mainDiv {
+                    margin-top: 9vh;
+                    width: 100%;
+                    padding: 20px;
+                    box-sizing: border-box;
+                }
+
+                .eventDiv {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #ffffff;
+                    height: auto;
+                    min-height: 340px;
+                    width: 300px;
+                    border-radius: 15px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.2s ease-in-out;
+                    margin: 10px;
+                }
+
+                .eventDiv:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                }
+
+                .eventSubDiv1 {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #f8f9fa;
+                    padding: 15px 20px;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    border-bottom: 1px solid #eee;
+                }
+
+                .eventSubDiv2 {
+                    padding: 20px;
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .startSoon,
+                .started,
+                .ended {
+                    padding: 6px 12px;
+                    border-radius: 20px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #000;
+                    text-transform: uppercase;
+                }
+
+                .startSoon {
+                    background-color: #ffd43b;
+                }
+
+                .started {
+                    background-color: #28a745;
+                }
+
+                .ended {
+                    background-color: #dc3545;
+                }
+
+                #eventDivs {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                    background-color: #f1f3f5;
+                    padding: 20px;
+                    border-radius: 20px;
+                    width: 100%;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    box-sizing: border-box;
+                }
+
+                .eventTime {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #495057;
+                    margin: 0;
+                }
+
+                .eventTitle {
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin: 0 0 15px 0;
+                    color: #212529;
+                }
+
+                .eventDesc {
+                    word-wrap: break-word;
+                    line-height: 1.6;
+                    color: #495057;
+                    margin: 0;
+                    font-size: 15px;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    #eventDivs {
+                        max-width: 800px;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    nav {
+                        padding: 20px;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+
+                    nav div {
+                        margin-top: 10px;
+                    }
+
+                    #mainDiv {
+                        margin-top: 15vh;
+                    }
+
+                    #eventDivs {
+                        padding: 15px;
+                        gap: 15px;
+                    }
+
+                    .eventDiv {
+                        width: calc(50% - 20px);
+                        min-width: 280px;
+                    }
+                }
+
+                @media screen and (max-width: 600px) {
+                    .eventDiv {
+                        width: 100%;
+                        margin: 10px 0;
+                    }
+
+                    #heroTitle {
+                        font-size: 24px;
+                        text-align: center;
+                    }
+                }
+            </style>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContent">
+            <div class="footerColumn">
+                <h3>Kontaktai</h3>
+                <p>Email: snipisbusiness@gmail.com</p>
+                <p>Tel: +370 000 00000</p>
+                <p>Savininko Discord: snipenzo</p>
+            </div>
+            <div class="footerColumn">
+                <h3>Papildoma informacija</h3>
+                <a href="faq.html">DUK: Dažnai užduodami klausimai</a>
+                <a href="https://workspace.google.com/products/forms/">Noriu tapti komandos nariu</a>
+                <a href="events.html">Renginių informacija</a>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <div class="copyright">
+                <p>© 2024 Lietuvos programuotojai. Visos teisės saugomos.</p>
+            </div>
+            <div class="footerSocials">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="./Assets/Photographic/Icons/facebook-logo.svg">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="./Assets/Photographic/Icons/instagram-logo.svg">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="./Assets/Photographic/Icons/linkedin-logo.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
